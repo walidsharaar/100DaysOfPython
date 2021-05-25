@@ -60,3 +60,27 @@ Write a program that prints the number of characters in a user's name. You might
 
 username = input("Enter your name: ")
 print(len(username))
+
+
+# Challenge Number 4 of day 1
+
+'''
+Don't change the code below
+a= input("a:")
+b=input("b:")
+
+Dont change the code above and try to switch the value of variables
+
+Don't change the code below
+print("a=" +a)
+print("b="+b)
+
+'''
+
+a= input("a:")
+b=input("b:")
+c = a 
+a = b
+b = c
+print("a=" +a)
+print("b="+b)
