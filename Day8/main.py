@@ -1,9 +1,12 @@
 # input functions in python
 
-def my_fucntion():
-    print("Greeting form a function!")
-    print("How do you do?")
-    print("Isn't the weather nice today?")
+# input functions in python
+
+def my_fucntion(name):
+
+    print(f"Greeting form a function {name} !")
+    print(f"How do you do {name}? ")
+    print(f"{name} isn't the weather nice today?")
 
 
-my_fucntion()
+my_fucntion(input("Enter your name:\n"))
