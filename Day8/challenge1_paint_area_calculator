@@ -21,10 +21,13 @@ You'll need 6 cans of paint.
 
 print("Welcome dear user!\n")
 
-def number_can(wall_height,wall_width,coverage):
+def number_can(wall_height,wall_width):
+    coverage = 5
 
-    total_can = 2*2
+    total_can =round( (wall_height*wall_width)/coverage)
 
     print(f"You will need {total_can} cans of paint.")
 
-number_can("","","")
+
+number_can(wall_height=int(input("Enter the height of the wall:\n")),
+           wall_width=int(input("Enter the width of the wall:\n")))
