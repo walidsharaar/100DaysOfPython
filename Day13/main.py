@@ -33,3 +33,29 @@ age = int(input("How old are you?"))
 if age > 18:
 # it is not indented and fstring is needed in the print statement
     print(f"You can drive at age {age}.")
+
+
+#Print is Your Friend
+pages = 0
+word_per_page = 0
+pages = int(input("Number of pages: "))
+# the below statement is incorrect and it is comparing.
+# it is the correct format word_per_page = int(input("Number of words per page: "))
+
+word_per_page == int(input("Number of words per page: "))
+total_words = pages * word_per_page
+print(total_words)
+
+#Use a Debugger
+def mutate(a_list):
+  b_list = []
+  for item in a_list:
+    new_item = item * 2
+  #append it outside of the loop
+  #  b_list.append(new_item)
+  b_list.append(new_item)
+  print(b_list)
+
+
+
+mutate([1,2,3,5,8,13])
