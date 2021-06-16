@@ -1,7 +1,11 @@
 #class declaration
 class User:
-    pass
+    def __init__(self , user_id,user_name):
+        self.id = user_id
+        self.name=user_name
 
 
-user_1 = User()
-print(user_1)
+
+user_1 = User(1,"Walid")
+
+print(user_1.name)
