@@ -33,14 +33,23 @@ for shape_side_no in range(3,11):
     my_turtle.color(random.choice(colours))
     draw_shape(shape_side_no)
 
+#method to generate different color
+def random_color():
+    r = random.randint(0,255)
+    g= random.randint(0,255)
+    b=random.randint(0,255)
+    rand_color=(r,g,b)
+    return rand_color
 
 # draw random move
 # directions = [east,north,west,south]
-my_turtle.pensize(20)
+my_turtle.pensize(15)
 my_turtle.speed("fastest")
 directions =[0,90,180,270]
 for _ in range(200):
     my_turtle.forward(30)
-    my_turtle.color(random.choice(colours))
+    my_turtle.color(random_color)
     my_turtle.setheading(random.choice(directions))
 
+
+# creation of Spirograph
