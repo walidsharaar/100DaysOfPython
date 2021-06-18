@@ -32,3 +32,15 @@ def draw_shape(slide_num):
 for shape_side_no in range(3,11):
     my_turtle.color(random.choice(colours))
     draw_shape(shape_side_no)
+
+
+# draw random move
+# directions = [east,north,west,south]
+my_turtle.pensize(20)
+my_turtle.speed("fastest")
+directions =[0,90,180,270]
+for _ in range(200):
+    my_turtle.forward(30)
+    my_turtle.color(random.choice(colours))
+    my_turtle.setheading(random.choice(directions))
+
