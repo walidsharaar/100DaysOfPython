@@ -16,3 +16,12 @@ for _ in range(15):
     my_turtle.penup()
     my_turtle.forward(10)
     my_turtle.pendown()
+
+# create different shapes
+
+slide_num = 5
+
+for _ in range(slide_num):
+    angle = 360/slide_num
+    my_turtle.backward(200)
+    my_turtle.right(angle)
