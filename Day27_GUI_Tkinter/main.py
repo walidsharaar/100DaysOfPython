@@ -9,15 +9,23 @@ window.minsize(width=500,height=300)
 my_label= tkinter.Label(text="I am label",font=("Arial",24,"bold"))
 my_label.pack()
 
-def add(*args):
-    sum=0
-    for n in args:
-        sum +=n
-    return  sum
+my_label.config(text="My Text")
 
-print(add(121,323,4123,123,1231,11))
+#button
+def button_clicked():
+    print("I got clicked!")
+    new_text = input.get()
+    my_label.config(text="Text Changed")
+
+button = tkinter.Button(text="click me", command=button_clicked)
+button.pack()
 
 
+#Entry component
+
+input = tkinter.Entry()
+input.pack()
+input.get()
 
 
 
