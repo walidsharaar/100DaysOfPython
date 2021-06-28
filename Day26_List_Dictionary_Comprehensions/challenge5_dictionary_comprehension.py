@@ -47,6 +47,7 @@ weather_c = {
 }
 # 🚨 Don't change code above 👆
 
+weather_f={day:(temp_c*9/5)+32 for (day , temp_c) in weather_c.items()}
 
 
 # Write your code 👇 below:
