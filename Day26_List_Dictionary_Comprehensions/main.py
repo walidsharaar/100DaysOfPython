@@ -2,6 +2,8 @@
 # new_list = [new_item for item in list]
 
 #normal list
+import random
+
 numb= [1,2,3]
 new_list =[]
 for n in numb:
@@ -27,3 +29,13 @@ print(new_name)
 
 capital_name = [name.upper() for name in names if len(name) < 5]
 print(capital_name)
+
+# dictionary comprehension
+# new_dict ={new_key:new_value for item in list}
+
+students_score = {student: random.randint(1,100) for student in names}
+print(students_score)
+
+#new_dict = {new_key:new_value for (key,value) in dictionary.items()}
+passed_student = {student:score for(student,score) in students_score.items() if score>=60 }
+print(passed_student)
