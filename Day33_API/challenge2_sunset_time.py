@@ -1,5 +1,5 @@
 import requests
-import datetime
+from datetime import datetime
 
 MY_LAT=13.309510
 MY_LONG=52.473200
@@ -18,7 +18,7 @@ print(sunset)
 
 time_now = datetime.now()
 
-print(time_now.hoour)
+print(time_now.hour)
 
 
 
