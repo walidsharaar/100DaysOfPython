@@ -42,15 +42,19 @@ pixel_data={
     "date":DATE ,
     "quantity":"6.3"
 }
-# response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
-# print(response.text)
+response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
+print(response.text)
 
 pixel_update={
     "date":DATE,
-    "quantity":"2.1"
+    "quantity":"5.1"
 }
 pixel_update_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{DATE}"
 
-response = requests.put(url=pixel_update_endpoint,json=pixel_update,headers=headers)
-print(response.text)
+# response = requests.put(url=pixel_update_endpoint,json=pixel_update,headers=headers)
+# print(response.text)
 
+
+pixel_delete_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+response=requests.delete(url=pixel_delete_endpoint,headers=headers)
+print(response.text)
