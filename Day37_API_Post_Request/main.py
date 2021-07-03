@@ -40,7 +40,7 @@ pixel_creation_endpoint =f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}"
 
 pixel_data={
     "date":DATE ,
-    "quantity":"6.3"
+    "quantity":input("How many kilo meters did you run today? :"),
 }
 response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
 print(response.text)
@@ -51,10 +51,10 @@ pixel_update={
 }
 pixel_update_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{DATE}"
 
-# response = requests.put(url=pixel_update_endpoint,json=pixel_update,headers=headers)
+response = requests.put(url=pixel_update_endpoint,json=pixel_update,headers=headers)
 # print(response.text)
 
 
-pixel_delete_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
-response=requests.delete(url=pixel_delete_endpoint,headers=headers)
-print(response.text)
+# pixel_delete_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+# response=requests.delete(url=pixel_delete_endpoint,headers=headers)
+# print(response.text)
