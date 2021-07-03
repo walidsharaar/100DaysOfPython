@@ -4,6 +4,8 @@ PIXELA_ENDPOINT="https://pixe.la/v1/users"
 TOKEN= "ITcanbeANYSecretKey"
 USER="walid"
 GRAPH_ID="graph1"
+today=datetime.now()
+DATE=today.strftime("%Y%m%d")
 
 user_param ={
     "token":TOKEN,
@@ -35,10 +37,20 @@ headers={
 # print(response.text)
 
 pixel_creation_endpoint =f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}"
-today=datetime.now()
+
 pixel_data={
-    "date": today.strftime("%Y%m%d"),
+    "date":DATE ,
     "quantity":"6.3"
 }
-response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
+# response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
+# print(response.text)
+
+pixel_update={
+    "date":DATE,
+    "quantity":"2.1"
+}
+pixel_update_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}/{DATE}"
+
+response = requests.put(url=pixel_update_endpoint,json=pixel_update,headers=headers)
 print(response.text)
+
