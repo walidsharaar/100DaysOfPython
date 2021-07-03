@@ -2,6 +2,7 @@ import requests
 PIXELA_ENDPOINT="https://pixe.la/v1/users"
 TOKEN= "ITcanbeANYSecretKey"
 USER="walid"
+GRAPH_ID="graph1"
 
 user_param ={
     "token":TOKEN,
@@ -15,7 +16,7 @@ user_param ={
 
 graph_endpoint=f"{PIXELA_ENDPOINT}/{USER}/graphs"
 graph_config={
-    "id":"graph1",
+    "id":GRAPH_ID,
     "name":"Running",
     "unit":"km",
     "type":"float",
@@ -29,6 +30,13 @@ headers={
     "X-USER-TOKEN":TOKEN
 }
 
-response=requests.post(url=graph_endpoint,json=graph_config,headers=headers)
-print(response.text)
+# response=requests.post(url=graph_endpoint,json=graph_config,headers=headers)
+# print(response.text)
 
+pixel_creation_endpoint =f"{PIXELA_ENDPOINT}/{USER}/graphs/{GRAPH_ID}"
+pixel_data={
+    "date":"20210703",
+    "quantity":"6.3"
+}
+response=requests.post(url=pixel_creation_endpoint,json=pixel_data,headers=headers)
+print(response.text)
