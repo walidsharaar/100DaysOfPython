@@ -1,10 +1,11 @@
 import requests
-PIXELA_ENDPOINT="https://pixe.la/v1/users -d "
+PIXELA_ENDPOINT="https://pixe.la/v1/users"
 user_param ={
     "token":"ITcanbeANYSecretKey",
-    "username":"Walid",
+    "username":"walid",
     "agreeTermsOfService":"yes",
     "notMinor":"yes",
 }
 
-requests.post(url=PIXELA_ENDPOINT,json=user_param)
+response=requests.post(url=PIXELA_ENDPOINT,json=user_param)
+print(response.text)
